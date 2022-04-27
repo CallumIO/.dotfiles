@@ -13,3 +13,7 @@ nix-env -iA \
         nixpkgs.direnv \
         nixpkgs.antibody \
         nixpkgs.fzf 
+
+# install development packages
+nix-env -iA \
+        nixpkgs.asdf-vm
