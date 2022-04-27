@@ -19,6 +19,11 @@ nix-env -iA \
 nix-env -iA \
         nixpkgs.asdf-vm
 
+# stow config files
+stow asdf
+stow git
+stow zsh
+
 # setup zsh
 command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
@@ -26,6 +31,27 @@ sudo chsh -s $(which zsh) $USER
 # bundle zsh plugins
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
-# git config
-git config --global user.email "github@cleslie.uk"
-git config --global user.name "Callum Leslie"
+sudo apt-get install \
+            make \
+            build-essential \
+            libssl-dev \
+            zlib1g-dev \
+            libbz2-dev \
+            libreadline-dev \
+            libsqlite3-dev \
+            wget \
+            curl \
+            llvm \
+            libncursesw5-dev \
+            xz-utils \
+            tk-dev \
+            libxml2-dev \
+            libxmlsec1-dev \
+            libffi-dev \
+            liblzma-dev
+
+asdf plugin add nodejs
+asdf plugin add python
+asdf plugin add rust
+
+asdf install
