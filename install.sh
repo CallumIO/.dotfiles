@@ -1,5 +1,5 @@
 # install nix package manager
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
+curl -L https://nixos.org/nix/install | sh
 
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
@@ -13,7 +13,8 @@ nix-env -iA \
         nixpkgs.direnv \
         nixpkgs.antibody \
         nixpkgs.fzf \
-        nixpkgs.stow
+        nixpkgs.stow \
+        nixpkgs.tmux
 
 # install development packages
 nix-env -iA \
@@ -55,3 +56,5 @@ asdf plugin add python
 asdf plugin add rust
 
 asdf install
+
+source /home/callum/.asdf/installs/rust/1.60.0/env
