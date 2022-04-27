@@ -17,3 +17,11 @@ nix-env -iA \
 # install development packages
 nix-env -iA \
         nixpkgs.asdf-vm
+
+# setup zsh
+command -v zsh | sudo tee -a /etc/shells
+sudo chsh -s $(which zsh) $USER
+
+# bundle zsh plugins
+antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+
