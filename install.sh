@@ -25,3 +25,6 @@ sudo chsh -s $(which zsh) $USER
 # bundle zsh plugins
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
+# git config
+git config --global user.email "github@cleslie.uk"
+git config --global user.name "Callum Leslie"
