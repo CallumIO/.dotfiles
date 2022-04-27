@@ -24,6 +24,7 @@ nix-env -iA \
 stow asdf
 stow git
 stow zsh
+stow tmux
 
 # setup zsh
 command -v zsh | sudo tee -a /etc/shells
@@ -58,3 +59,4 @@ asdf plugin add rust
 asdf install
 
 source /home/callum/.asdf/installs/rust/1.60.0/env
+tmux source ~/.tmux.conf
