@@ -12,7 +12,8 @@ nix-env -iA \
         nixpkgs.bat \
         nixpkgs.direnv \
         nixpkgs.antibody \
-        nixpkgs.fzf 
+        nixpkgs.fzf \
+        nixpkgs.stow
 
 # install development packages
 nix-env -iA \
