@@ -17,6 +17,14 @@ compinit
 source ~/.zsh_plugins.sh
 
 alias cat="bat"
+ASDF_BIN="${ASDF_DIR}/bin"
+ASDF_USER_SHIMS="${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
+[[ ":$PATH:" == *":${ASDF_BIN}:"* ]] && PATH="${PATH//$ASDF_BIN:/}"
+[[ ":$PATH:" == *":${ASDF_USER_SHIMS}:"* ]] && PATH="${PATH//$ASDF_USER_SHIMS:/}"
+PATH="${ASDF_BIN}:$PATH"
+PATH="${ASDF_USER_SHIMS}:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [ -e /home/callum/.nix-profile/etc/profile.d/nix.sh ]; then . /home/callum/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
