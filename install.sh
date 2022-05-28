@@ -34,24 +34,14 @@ sudo chsh -s $(which zsh) $USER
 # bundle zsh plugins
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
-sudo apt-get install \
-            make \
-            build-essential \
-            libssl-dev \
-            zlib1g-dev \
-            libbz2-dev \
-            libreadline-dev \
-            libsqlite3-dev \
-            wget \
-            curl \
-            llvm \
-            libncursesw5-dev \
-            xz-utils \
-            tk-dev \
-            libxml2-dev \
-            libxmlsec1-dev \
-            libffi-dev \
-            liblzma-dev
+packages="make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev"
+
+if [ -x "$(command -v apk)" ];       then sudo apk add --no-cache $packages
+elif [ -x "$(command -v apt-get)" ]; then sudo apt-get install $packages
+elif [ -x "$(command -v dnf)" ];     then sudo dnf install $packages
+elif [ -x "$(command -v zypper)" ];  then sudo zypper install $packages
+elif [ -x "$(command -v yum)" ];  then sudo yum install $packages
+else echo "FAILED TO INSTALL PACKAGE: Package manager not found. You must manually install: $packagesNeeded">&2; fi
 
 asdf plugin add nodejs
 asdf plugin add python
