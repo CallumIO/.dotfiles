@@ -28,3 +28,4 @@ PATH="${ASDF_USER_SHIMS}:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [ -e /home/callum/.nix-profile/etc/profile.d/nix.sh ]; then . /home/callum/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+eval $(thefuck --alias)
