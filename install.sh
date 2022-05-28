@@ -14,7 +14,8 @@ nix-env -iA \
         nixpkgs.antibody \
         nixpkgs.fzf \
         nixpkgs.stow \
-        nixpkgs.tmux
+        nixpkgs.tmux \
+	nixos.thefuck
 
 # install development packages
 nix-env -iA \
@@ -55,6 +56,7 @@ sudo apt-get install \
 asdf plugin add nodejs
 asdf plugin add python
 asdf plugin add rust
+asdf plugin add perl
 
 asdf install
 

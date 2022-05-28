@@ -711,6 +711,7 @@
   typeset -g POWERLEVEL9K_ASDF_RUST_SHOW_ON_UPGLOB='Cargo.toml|*.rs'
   typeset -g POWERLEVEL9K_ASDF_PYTHON_SHOW_ON_UPGLOB='*.py|*.pynb'
   typeset -g POWERLEVEL9K_ASDF_NODEJS_SHOW_ON_UPGLOB='package.json|*.js'
+  typeset -g POWERLEVEL9K_ASDF_PERL_SHOW_ON_UPGLOB='*.pl'
 
   ##########[ nordvpn: nordvpn connection status, linux only (https://nordvpn.com/) ]###########
   # NordVPN connection indicator color.
