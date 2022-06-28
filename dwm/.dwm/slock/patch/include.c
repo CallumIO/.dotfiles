@@ -1,7 +1,0 @@
-/* Patches */
-
-
-
-
-
-#include "xresources.c"
