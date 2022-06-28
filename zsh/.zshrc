@@ -35,6 +35,12 @@ source ~/.zsh_plugins.zsh
 
 if [ -e /home/callum/.nix-profile/etc/profile.d/nix.sh ]; then . /home/callum/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 eval $(thefuck --alias)
+
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
 alias ls='ls -a --color=auto'
 alias ll='ls -al --color=auto'
+
 neofetch
