@@ -9,15 +9,22 @@ fi
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ];
  then . ~/.nix-profile/etc/profile.d/nix.sh; fi
 
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+export _Z_DATA="$XDG_DATA_HOME/z"
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+
 # load compdef
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 # source plugins
-. ~/.antidote/antidote.zsh
+. $XDG_CONFIG_HOME/antidote/antidote.zsh
 source <(antidote init)
-antidote load
-antidote bundle < ~/.zsh_plugins.txt
+#antidote load
+antidote bundle <$XDG_CONFIG_HOME/zsh/zsh_plugins.txt >$XDG_CONFIG_HOME/zsh/zsh_plugins.zsh
 
 alias cat="bat"
 
@@ -29,18 +36,15 @@ ASDF_USER_SHIMS="${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
 PATH="${ASDF_BIN}:$PATH"
 PATH="${ASDF_USER_SHIMS}:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.zsh_plugins.zsh
+[[ ! -f $XDG_CONFIG_HOME/zsh/p10k.zsh ]] || source $XDG_CONFIG_HOME/zsh/p10k.zsh
+
+source $XDG_CONFIG_HOME/zsh/zsh_plugins.zsh
 
 if [ -e /home/callum/.nix-profile/etc/profile.d/nix.sh ]; then . /home/callum/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 eval $(thefuck --alias)
 
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_STATE_HOME=$HOME/.local/state
-export XDG_CACHE_HOME=$HOME/.cache
 alias ls='ls -a --color=auto'
 alias ll='ls -al --color=auto'
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 neofetch
