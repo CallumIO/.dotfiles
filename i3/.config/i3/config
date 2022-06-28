@@ -41,6 +41,8 @@ set $lock i3lock
 set $browser firefox
 set $editor code
 set $fileman lf
+#set $run_prompt dmenu_run
+set $run_prompt rofi -show drun
 
 floating_modifier $mod
 
@@ -50,7 +52,7 @@ gaps outer $outer_gaps
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $term --working-directory $(xcwd)
 
-bindsym $mod+space exec --no-startup-id dmenu_run
+bindsym $mod+space exec --no-startup-id $run_prompt
 
 bindsym $mod+q [con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 
