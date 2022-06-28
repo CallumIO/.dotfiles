@@ -16,6 +16,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export _Z_DATA="$XDG_DATA_HOME/z"
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 # load compdef
 autoload -Uz compinit
