@@ -1,0 +1,44 @@
+include-file = colours.ini
+include-file = modules.ini
+
+
+[bar/master]
+height = 22pt
+offset-y = 1%
+fixed-center = true
+line-size = 1pt
+background = ${colors.Mantle}
+foreground = ${colors.Lavender}
+font-0 = "RobotoMono Nerd Font:weight=bold:size=9;2"
+font-1 = "RobotoMono Nerd Font:size=10;3"
+font-2 = "RobotoMono Nerd Font:size=11;3"
+enable-ipc = true
+wm-restack = i3
+override-redirect = true
+
+
+[bar/left]
+inherit = bar/master
+width = 16%
+offset-x = 1.5%
+modules-center = day space sep space date space sep space time
+
+
+
+[bar/middle]
+inherit = bar/master
+width = 18%
+offset-x = 41%
+modules-center = xworkspaces
+
+
+[bar/right]
+inherit = bar/master
+width = 16%
+offset-x = 82.5%
+modules-center = pulseaudio space sep space eth space sep space power 
+
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true

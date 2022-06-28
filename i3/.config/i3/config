@@ -1,13 +1,35 @@
+font pango:JetBrainsMono Nerd Font Mono Bold 10
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+exec_always --no-startup-id picom
+
+exec_always --no-startup-id feh --bg-scale ~/.config/backgrounds/seaside.jpg
+
+exec_always --no-startup-id conky
 
 bar {
-	position top
-	status_command i3status
+    height 22
+    mode dock
+    output DP-1
+    position top
+    tray_output none  # do not show tray output
+    workspace_buttons no    # do not show workspace buttons
+
+    bindsym button1 nop
+    bindsym button2 nop
+    bindsym button3 nop
+    bindsym button4 nop
+    bindsym button5 nop
+
+    i3bar_command i3bar -t
+    colors {
+        background #00000000
+    }
 }
 
-font pango:monospace 8
-
-smart_gaps on
-smart_borders on
+#smart_gaps on
+#smart_borders on
 set $inner_gaps 15
 set $outer_gaps 12
 set $term --no-startup-id alacritty
@@ -27,7 +49,7 @@ gaps inner $inner_gaps
 gaps outer $outer_gaps
 
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec $term --working directory $(xcwd)
+bindsym $mod+Shift+Return exec $term --working-directory $(xcwd)
 
 bindsym $mod+space exec --no-startup-id dmenu_run
 

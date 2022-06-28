@@ -7,7 +7,8 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
-
+export ASDF_DATA_DIR="${XDG_DATA_HOME}"/asdf
+export EDITOR="vim"
 export LF_ICONS="\
 	tw=:\
 	st=:\

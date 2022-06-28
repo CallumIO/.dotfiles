@@ -38,6 +38,7 @@ if [ -e /home/callum/.nix-profile/etc/profile.d/nix.sh ]; then . /home/callum/.n
 alias ls='ls -a --color=auto'
 alias ll='ls -al --color=auto'
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias sx=startx "$XDG_CONFIG_HOME/X11/xinitrc"
 eval $(thefuck --alias)
 
 neofetch
