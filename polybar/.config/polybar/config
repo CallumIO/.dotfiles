@@ -41,4 +41,4 @@ modules-center = pulseaudio space sep space eth space sep space power
 
 [settings]
 screenchange-reload = true
-pseudo-transparency = true
+#pseudo-transparency = true
