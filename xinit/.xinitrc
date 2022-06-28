@@ -1,13 +1,13 @@
 [[ -f ~/.Xresources ]] && xrdb --merge -I$HOME ~/.Xresources
 
-xrandr --output DVI-D-1 --mode 1680x1050 --rate 60.00 --right-of DP-1 --output DP-1 --mode 1920x1080 --rate 144.00 --primary --output DP-2 --mode 1920x1080 --rate 60.00 --left-of DP-1
+xrandr --output DVI-D-1 --mode 1680x1050 --rate 60.00 --right-of DP-1 --output DP-1 --mode 1920x1080 --rate 144.00 --primary --output DP-2 --mode 1920x1080 --rate 60.00 --left-of DP-1 &
 
-xset s off
-xset -dpms
-xset s noblank
-xset r rate 210 40
+xset s off &
+xset -dpms &
+xset s noblank &
+xset r rate 210 40 &
 
-killall pipewire
+killall pipewire &
 pipewire &
 
 exec /usr/bin/i3
