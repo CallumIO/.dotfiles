@@ -44,7 +44,6 @@ set $fileman lf
 
 floating_modifier $mod
 
-for_window [class="^.*"] border pixel 2
 gaps inner $inner_gaps
 gaps outer $outer_gaps
 

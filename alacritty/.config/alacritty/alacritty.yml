@@ -103,7 +103,7 @@ window:
   #   multiplier: 10
 
 # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  dynamic_title: false
 
   # # If `true`, bold text is drawn using the bright color variants.
   # draw_bold_text_with_bright_colors: true
@@ -111,7 +111,9 @@ window:
   # selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
   save_to_clipboard: true
+  decorations: "none"
   live_config_reload: true
+
 key_bindings:
   - { key: V, mods: Control|Shift, action: Paste }
   - { key: C, mods: Control|Shift, action: Copy }
