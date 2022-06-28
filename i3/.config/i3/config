@@ -28,6 +28,8 @@ bar {
     }
 }
 
+for_window [class="^.*"] border pixel 0.1
+
 #smart_gaps on
 #smart_borders on
 set $inner_gaps 15
@@ -96,8 +98,9 @@ bindsym $mod+Shift+Right move right 30
 bindsym $mod+Ctrl+Right move workspace to output right
 
 
-assign [class="discord"] 8
-for_window [class="Spotify"] move to workspace 9
+for_window [class="discord"] move to workspace 8
+for_window [class="ripcord"] move to workspace 8
+assign [class="Spotify"] 9
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
