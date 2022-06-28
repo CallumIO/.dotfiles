@@ -4,7 +4,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec_always --no-startup-id picom
 
-exec_always --no-startup-id feh --bg-scale ~/.config/backgrounds/seaside.jpg
+exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/backgrounds/seaside.jpg
 
 exec_always --no-startup-id conky
 
@@ -58,7 +58,7 @@ bindsym $mod+b exec --no-startup-id $browser
 
 bindsym $mod+c exec --no-startup-id $lock
 
-bindsym $mod+e exec --no-startup-id $term -e $fileman
+bindsym $mod+e exec --no-startup-id $term --working-directory ~ -e $fileman
 
 bindsym $mod+i exec --no-startup-id $editor
 
