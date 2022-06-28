@@ -7,4 +7,7 @@ xset -dpms
 xset s noblank
 xset r rate 210 40
 
+killall pipewire
+pipewire &
+
 exec /usr/bin/i3
