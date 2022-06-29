@@ -39,6 +39,8 @@
     newline                 # \n
     # prompt_char           # prompt symbol
   )
+  
+  typeset -g POWERLEVEL9K_LINUX_ARTIX_ICON='\uF303'
 
   # The list of segments shown on the right. Fill it with less important segments.
   # Right prompt on the last prompt line (where you are typing your commands) gets
@@ -712,7 +714,13 @@
   typeset -g POWERLEVEL9K_ASDF_PYTHON_SHOW_ON_UPGLOB='*.py|*.pynb'
   typeset -g POWERLEVEL9K_ASDF_NODEJS_SHOW_ON_UPGLOB='package.json|*.js'
   typeset -g POWERLEVEL9K_ASDF_PERL_SHOW_ON_UPGLOB='*.pl'
-
+  typeset -g POWERLEVEL9K_ASDF_HASKELL_SHOW_ON_UPGLOB='*.lhs|*.hs'
+  typeset -g POWERLEVEL9K_ASDF_JAVA_SHOW_ON_UPGLOB='*.class|*.jar' 
+  typeset -g POWERLEVEL9K_ASDF_PHP_SHOW_ON_UPGLOB='*.php'
+  typeset -g POWERLEVEL9K_ASDF_LUA_SHOW_ON_UPGLOB='*.lua'
+  typeset -g POWERLEVEL9K_ASDF_GOLANG_SHOW_ON_UPGLOB='*.go'
+  typeset -g POWERLEVEL9K_ASDF_DART_SHOW_ON_UPGLOB='*.dart|pubspec.yaml'
+    
   ##########[ nordvpn: nordvpn connection status, linux only (https://nordvpn.com/) ]###########
   # NordVPN connection indicator color.
   typeset -g POWERLEVEL9K_NORDVPN_FOREGROUND=39

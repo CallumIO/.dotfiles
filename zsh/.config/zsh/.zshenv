@@ -8,7 +8,8 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export ASDF_DATA_DIR="${XDG_DATA_HOME}"/asdf
-export EDITOR="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 [ -f $XDG_CONFIG_HOME/lf/LF_ICONS ] && {
 	LF_ICONS="$(tr '\n' ':' <$XDG_CONFIG_HOME/lf/LF_ICONS)" \
 		&& export LF_ICONS

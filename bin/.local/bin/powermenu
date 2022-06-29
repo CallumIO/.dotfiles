@@ -6,6 +6,6 @@ case "$chosen" in
   "") poweroff ;;
     "") reboot ;;
     "") i3lock ;;
-#    "") systemctl suspend ;;
+    "") i3lock && echo mem | sudo tee /sys/power/state ;;
     *) exit 1 ;;
 esac
