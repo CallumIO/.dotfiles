@@ -38,7 +38,7 @@ if status_ok then
     filesystem = {
       filtered_items = {
         visible = false,
-        hide_dotfiles = true,
+        hide_dotfiles = false,
         hide_gitignored = false,
         hide_by_name = {
           ".DS_Store",
@@ -48,7 +48,7 @@ if status_ok then
         },
       },
       follow_current_file = true,
-      hijack_netrw_behavior = "open_current",
+      hijack_netrw_behavior = "open_default",
       use_libuv_file_watcher = true,
     },
     git_status = {
