@@ -3,8 +3,8 @@
 chosen=$(printf "\n\n\n" | rofi -dmenu -i -theme-str '@import "powermenu.rasi"')
 
 case "$chosen" in
-  "") poweroff ;;
-    "") reboot ;;
+  "") sudo poweroff ;;
+    "") sudo reboot ;;
     "") i3lock ;;
     "") i3lock && echo mem | sudo tee /sys/power/state ;;
     *) exit 1 ;;

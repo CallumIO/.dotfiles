@@ -2,7 +2,7 @@ font pango:JetBrainsMono Nerd Font Mono Bold 10
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always --no-startup-id picom
+exec_always --no-startup-id picom --experimental-backend
 
 exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/backgrounds/seaside.jpg
 
@@ -11,7 +11,7 @@ exec_always --no-startup-id conky
 bar {
     height 22
     mode dock
-    output DP-1
+    output DP-4
     position top
     tray_output none  # do not show tray output
     workspace_buttons no    # do not show workspace buttons
@@ -41,7 +41,7 @@ set $shutdown sudo -A shutdown now
 set $reboot sudo -A reboot
 set $lock i3lock
 set $browser firefox
-set $editor code
+set $editor neovide
 set $fileman lf
 #set $run_prompt dmenu_run
 set $run_prompt rofi -show drun
@@ -49,6 +49,7 @@ set $run_prompt rofi -show drun
 floating_modifier $mod
 
 gaps inner $inner_gaps
+
 gaps outer $outer_gaps
 
 bindsym $mod+Return exec $term
@@ -103,8 +104,8 @@ assign [class="Spotify"] media
 assign [class="discord"] chat
 assign [class="ripcord"] chat
 
-workspace chat output DVI-D-1
-workspace media output DVI-D-1
+workspace chat output DVI-D-0
+workspace media output DVI-D-0
 bindsym $mod+m exec --no-startup-id spotify; workspace media
 bindsym $mod+Ctrl+m workspace media
 bindsym $mod+Shift+m exec --no-startup-id ripcord; workspace chat
