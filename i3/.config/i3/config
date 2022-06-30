@@ -1,12 +1,12 @@
 font pango:JetBrainsMono Nerd Font Mono Bold 10
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
 
 exec_always --no-startup-id picom --experimental-backend
 
 exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/backgrounds/seaside.jpg
 
-exec_always --no-startup-id conky
+exec_always --no-startup-id $XDG_CONFIG_HOME/conky/launch.sh
 
 bar {
     height 22
