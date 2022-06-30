@@ -1,9 +1,12 @@
 [user]
 	email = git@cleslie.uk
 	name = Callum Leslie
+	signingkey = D382C4AFEECEAA90
 [core]
 	longpaths = true
 	excludesfile = /home/c/.config/git/gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[commit]
+	gpgsign = true
