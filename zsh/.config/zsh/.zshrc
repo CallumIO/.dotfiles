@@ -27,6 +27,7 @@ ASDF_USER_SHIMS="${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
 [[ ":$PATH:" == *":${ASDF_USER_SHIMS}:"* ]] && PATH="${PATH//$ASDF_USER_SHIMS:/}"
 PATH="${ASDF_BIN}:$PATH"
 PATH="${ASDF_USER_SHIMS}:$PATH"
+PATH="${XDG_BIN_HOME}:$PATH"
 
 #[[ ! -f $XDG_CONFIG_HOME/zsh/p10k.zsh ]] || source $XDG_CONFIG_HOME/zsh/p10k.zsh
 
@@ -39,9 +40,11 @@ alias ls='ls -a --color=auto'
 alias ll='ls -al --color=auto'
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias sx=startx "$XDG_CONFIG_HOME/X11/xinitrc"
-alias nv=nvim
-alias n=nvim
-
+alias nv='swallow neovide --nofork --multigrid'
+alias n='swallow neovide --nofork --multigrid'
+alias neovide='swallow neovide --nofork --multigrid'
+alias mpv='swallow mpv'
+alias nsxiv='swallow nsxiv' 
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
 

@@ -1,4 +1,4 @@
-font pango:JetBrainsMono Nerd Font Mono Bold 10
+font pango:JetBrainsMono Nerd Font Mono Bold 0
 
 exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
 
@@ -40,7 +40,7 @@ set $alt Mod1
 set $shutdown sudo -A shutdown now
 set $reboot sudo -A reboot
 set $lock i3lock
-set $browser firefox
+set $browser librewolf
 set $editor neovide
 set $fileman lf
 #set $run_prompt dmenu_run
@@ -58,8 +58,6 @@ bindsym $mod+Shift+Return exec $term --working-directory $(xcwd)
 bindsym $mod+space exec --no-startup-id $run_prompt
 
 bindsym $mod+q [con_id="__focused__" instance="^(?!dropdown_).*$"] kill
-
-bindsym $mod+b exec --no-startup-id $browser
 
 bindsym $mod+c exec --no-startup-id $lock
 
@@ -103,13 +101,26 @@ bindsym $mod+Ctrl+Right move workspace to output right
 assign [class="Spotify"] media
 assign [class="discord"] chat
 assign [class="ripcord"] chat
+assign [class="hamsket"] chat
+assign [class="Bitwarden"] secure
+assign [class="librewolf"] browser
 
 workspace chat output DVI-D-0
 workspace media output DVI-D-0
+workspace secure output DVI-D-0
+workspace browser output DP-2
+
 bindsym $mod+m exec --no-startup-id spotify; workspace media
 bindsym $mod+Ctrl+m workspace media
-bindsym $mod+Shift+m exec --no-startup-id ripcord; workspace chat
+
+bindsym $mod+Shift+m exec --no-startup-id hamsket; workspace chat
 bindsym $mod+Ctrl+Shift+m workspace chat
+
+bindsym $mod+b exec --no-startup-id librewolf; workspace browser
+bindsym $mod+Ctrl+b workspace browser
+
+bindsym $mod+Shift+b exec --no-startup-id bitwarden-desktop; workspace secure
+bindsym $mod+Ctrl+Shift+b workspace secure
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -120,7 +131,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace 0
 
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
