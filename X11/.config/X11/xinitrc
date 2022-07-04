@@ -9,5 +9,6 @@ xset r rate 210 40 &
 
 killall pipewire &
 pipewire &
+unclutter &
 
 exec /usr/bin/i3
