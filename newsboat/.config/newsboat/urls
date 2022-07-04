@@ -1,0 +1,39 @@
+------------------------
+-------NEWSFEEDS--------
+------------------------
+https://archlinux.org/feeds/news/ "~NEWSFEED: ArchLinux"
+https://distrowatch.com/news/dw.xml "~NEWSFEED: DistroWatch"
+https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com"
+https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal"
+https://itsfoss.com/feed/ "~NEWSFEED: It's Foss"
+https://opensource.com/feed "~NEWSFEED: Opensource.com"
+https://hackaday.com/blog/feed/ "~NEWSFEED: Hackaday"
+https://www.gamingonlinux.com/article_rss.php "~NEWSFEED: Gaming On Linux"
+
+-------------------------
+-------YOUTUBE-----------
+-------------------------
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~YOUTUBE: Linus Tech Tips"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~YOUTUBE: Luke Smith"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ "~YOUTUBE: Level1Techs"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOWcZ6Wicl-1N34H0zZe38w "~YOUTUBE: Level1Linux"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~YOUTUBE: Brodie Robertson"
+-------------------------
+-------REDDIT------------
+-------------------------
+https://www.reddit.com/r/unixporn.rss "~REDDIT: r/unixporn"
+https://www.reddit.com/r/archlinux.rss "~REDDIT: r/archlinux"
+https://www.reddit.com/r/linuxmasterrace.rss "~REDDIT: r/linuxmasterrace"
+https://www.reddit.com/r/linux.rss "~REDDIT: r/linux"
+-------------------------
+-------GIT_REPOS---------
+-------------------------
+https://github.com/CallumIO.atom "~GITHUB: CallumIO"
+-------------------------
+-------ARCHLINUX---------
+-------------------------
+https://www.archlinux.org/feeds/packages/added/ "~ARCH: Packages Added"
+https://www.archlinux.org/feeds/packages/removed/ "~ARCH: Packages Removed"
+https://aur.archlinux.org/rss/ "~ARCH: Packages Added (AUR)"
+https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki"
+
