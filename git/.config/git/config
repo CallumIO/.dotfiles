@@ -10,3 +10,5 @@
 	diffFilter = diff-so-fancy --patch
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
