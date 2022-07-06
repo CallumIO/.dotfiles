@@ -34,14 +34,31 @@ local config = {
   default_theme = {
     diagnostics_style = { italic = true },
     -- Modify the color table
-    colors = {
-      fg = "#abb2bf",
-    },
+    colors = function(C)
+      C.fg = "#abb2bf"
+      C.telescope_green = C.green
+      C.telescope_red = C.red
+      C.telescope_fg = C.fg
+      C.telescope_bg = C.black_1
+      C.telescope_bg_alt = C.bg_1
+      return C
+    end,
     -- Modify the highlight groups
     highlights = function(highlights)
       local C = require "default_theme.colors"
-
       highlights.Normal = { fg = C.fg, bg = C.bg }
+      highlights.TelescopeBorder = { fg = C.telescope_bg_alt, bg = C.telescope_bg }
+      highlights.TelescopeNormal = { bg = C.telescope_bg }
+      highlights.TelescopePreviewBorder = { fg = C.telescope_bg, bg = C.telescope_bg }
+      highlights.TelescopePreviewNormal = { bg = C.telescope_bg }
+      highlights.TelescopePreviewTitle = { fg = C.telescope_bg, bg = C.telescope_green }
+      highlights.TelescopePromptBorder = { fg = C.telescope_bg_alt, bg = C.telescope_bg_alt }
+      highlights.TelescopePromptNormal = { fg = C.telescope_fg, bg = C.telescope_bg_alt }
+      highlights.TelescopePromptPrefix = { fg = C.telescope_red, bg = C.telescope_bg_alt }
+      highlights.TelescopePromptTitle = { fg = C.telescope_bg, bg = C.telescope_red }
+      highlights.TelescopeResultsBorder = { fg = C.telescope_bg, bg = C.telescope_bg }
+      highlights.TelescopeResultsNormal = { bg = C.telescope_bg }
+      highlights.TelescopeResultsTitle = { fg = C.telescope_bg, bg = C.telescope_bg }
       return highlights
     end,
     plugins = { -- enable or disable extra plugin highlighting
