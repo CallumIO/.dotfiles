@@ -13,7 +13,12 @@ if status_ok then
       max_name_length = 14,
       max_prefix_length = 13,
       tab_size = 20,
-      separator_style = "thin",
+      separator_style = "thick",
+      diagnostics = "nvim_lsp",
+      show_close_icon = false,
+      right_mouse_command = nil,
+      middle_mouse_command = nil,
+      left_mouse_command = nil,
     },
   }))
 end
