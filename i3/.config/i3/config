@@ -8,6 +8,8 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/backgrounds/seas
 
 exec_always --no-startup-id $XDG_CONFIG_HOME/conky/launch.sh
 
+exec_always --no-startup-id sudo killall spotifyd && spotifyd
+
 bar {
     height 22
     mode dock
@@ -110,7 +112,7 @@ workspace media output DVI-D-0
 workspace secure output DVI-D-0
 workspace browser output DP-2
 
-bindsym $mod+m exec --no-startup-id spotify; workspace media
+bindsym $mod+m exec --no-startup-id $term --class Spotify -e spt; workspace media
 bindsym $mod+Ctrl+m workspace media
 
 bindsym $mod+Shift+m exec --no-startup-id hamsket; workspace chat
