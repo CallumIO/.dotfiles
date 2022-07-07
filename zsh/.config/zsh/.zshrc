@@ -48,4 +48,4 @@ alias nsxiv='swallow nsxiv'
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
 
-neofetch
+pfetch
