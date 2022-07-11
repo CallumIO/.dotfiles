@@ -121,6 +121,11 @@ local config = {
       config.sources = {
         -- Set a formatter
         null_ls.builtins.formatting.rufo,
+        null_ls.builtins.formatting.black.with({
+          extra_args = {"--line-length", "101"}
+        }),
+        null_ls.builtins.formatting.eslint_d,
+        null_ls.builtins.formatting.fixjson,
         -- Set a linter
         null_ls.builtins.diagnostics.rubocop,
       }
