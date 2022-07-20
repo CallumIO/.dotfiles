@@ -8,6 +8,8 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/backgrounds/seas
 
 exec_always --no-startup-id $XDG_CONFIG_HOME/conky/launch.sh
 
+exec_always --no-startup-id pipewire
+
 exec_always --no-startup-id sudo killall spotifyd && spotifyd
 
 bar {
@@ -150,6 +152,7 @@ bindsym $mod+F1 restart
 
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move position center
+for_window [title="Friends List"] floating enable
 
 client.focused #4c7899 #285577 #ffffff #2e9ef4 #abb2bf
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
