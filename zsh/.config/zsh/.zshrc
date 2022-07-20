@@ -28,6 +28,8 @@ ASDF_USER_SHIMS="${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
 PATH="${ASDF_BIN}:$PATH"
 PATH="${ASDF_USER_SHIMS}:$PATH"
 PATH="${XDG_BIN_HOME}:$PATH"
+export BUN_INSTALL="/home/c/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 #[[ ! -f $XDG_CONFIG_HOME/zsh/p10k.zsh ]] || source $XDG_CONFIG_HOME/zsh/p10k.zsh
 
@@ -49,3 +51,6 @@ eval $(thefuck --alias)
 eval "$(starship init zsh)"
 
 pfetch
+
+# bun completions
+[ -s "/home/c/.bun/_bun" ] && source "/home/c/.bun/_bun"
