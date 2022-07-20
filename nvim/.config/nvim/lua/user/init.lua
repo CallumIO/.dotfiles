@@ -105,7 +105,11 @@ local config = {
       --   end,
       -- },
       {
-        "catppuccin/nvim",
+        "andweeb/presence.nvim"
+      },
+
+      {
+       "catppuccin/nvim",
         as = "catppuccin",
         config = function()
           require("catppuccin").setup {}
